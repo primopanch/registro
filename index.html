@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Mi perfil</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@600;800&family=Figtree:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<main class="pagina">
+  <form id="formulario" class="tarjeta" novalidate>
+    <h2>Tu perfil</h2>
+
+    <div class="fila">
+      <div class="campo">
+        <label for="nombre">Nombre(s)</label>
+        <input id="nombre" type="text" placeholder="María Fernanda" autocomplete="given-name">
+        <small class="aviso" id="aviso-nombre"></small>
+      </div>
+      <div class="campo">
+        <label for="apellido">Apellido(s)</label>
+        <input id="apellido" type="text" placeholder="López Ruiz" autocomplete="family-name">
+        <small class="aviso" id="aviso-apellido"></small>
+      </div>
+    </div>
+
+    <div class="fila">
+      <div class="campo">
+        <label for="telefono">Teléfono</label>
+        <input id="telefono" type="tel" inputmode="numeric" maxlength="10" placeholder="5512345678" autocomplete="tel">
+        <small class="aviso" id="aviso-telefono"></small>
+      </div>
+      <div class="campo">
+        <label for="correo">Correo electrónico</label>
+        <input id="correo" type="email" placeholder="nombre@correo.com" autocomplete="email">
+        <small class="aviso" id="aviso-correo"></small>
+      </div>
+    </div>
+
+    <fieldset class="campo">
+      <legend>Género</legend>
+      <div class="opciones">
+        <label class="opcion"><input type="radio" name="genero" value="Femenino"><span>Femenino</span></label>
+        <label class="opcion"><input type="radio" name="genero" value="Masculino"><span>Masculino</span></label>
+        <label class="opcion"><input type="radio" name="genero" value="Otro"><span>Otro</span></label>
+      </div>
+    </fieldset>
+
+    <div class="campo">
+      <label for="bio">Biografía</label>
+      <textarea id="bio" rows="4" maxlength="200" placeholder="Cuéntanos en pocas palabras a qué te dedicas o qué te apasiona"></textarea>
+      <small class="contador"><span id="contador">0</span> / 200</small>
+    </div>
+
+    <button type="submit">Guardar cambios</button>
+    <p class="exito" id="exito" role="status"></p>
+  </form>
+</main>
+<script src="script.js"></script>
+</body>
+</html>
